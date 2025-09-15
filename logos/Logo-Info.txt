@@ -1,0 +1,4 @@
+Add your regular university/institute logo to this folder and replace the JGU-Logo include in the slides to point to your own.
+
+As the background is not exactly white on the slides, lighter coloured text/graphics may not display well.
+@Liam on slack if you need to image magic applied to your logo to make it visible, and/or need help alligning it.

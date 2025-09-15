@@ -2,6 +2,12 @@
 
 LaTeX Beamer Template for DUNE Slides
 
+## Dependencies
+
+Most modern LaTeX distributions should be able to build this just fine.
+If on Ubuntu/Debian/Mint/etc. make sure you have texlive-xetex installed, as this will pull in all the required LaTeX packages.
+```sudo apt-get install texlive-xetex```
+
 ## Building
 
 Currently builds with `xelatex` or `pdflatex`, run `xelatex main.tex`/`pdflatex main.tex` to compile, then view `main.pdf` with your favourite PDF viewer.

@@ -9,12 +9,13 @@
 \usepackage{tikz,xcolor}
 
 %%% TODO 1
-\newcommand{\Dtitle}{\text  {Riveting Talk Title}}
-\newcommand{\Dname}{\text   {Name Surname}}
-\newcommand{\Dsession}{\text{Session or Talk Location}}
+\newcommand{\Dtitle}{\text  { Riveting Talk Title }}
+\newcommand{\Dname}{\text   { Name Surname }}
+\newcommand{\Dpronoun}{\text{ (he/she/they) }}
+\newcommand{\Dsession}{\text{ Session or Talk Location }}
 \newcommand{\Ddate}{\text   {32/13/2026}}
+%\newcommand{\Dpronoun}{}                     % Uncomment for no pronouns
 %\newcommand{\Ddate}{\today} % If you compile your slides the day of (like me!), use this
-%\newcommand{\Dname}{Name Surname \\ \small{he/she/they/etc.}} % With pronouns for those who prefer
 %%% /TODO 1
 
 % Custom colour definitions for accessibility, branding, etc.
@@ -40,12 +41,12 @@
   {\footnotesize
     \begin{center}\tikz\fill[DRed] (2.2,0.0) rectangle (16.5,0.05);\end{center} % The big orange line
     \vspace{-3pt}
-    \hspace*{25.8pt}{\color{DRed}\insertframenumber\hspace{40pt}\Dtitle ~| \Dname }% Slide no., title, name
+    \hspace*{25.8pt}{\color{DRed}\insertframenumber\hspace{40pt}\Dtitle \ - \Dname }% Slide no., title, name
     \vspace{2mm} % extra bottom space
     %
     % Include the DUNE logo:
     \tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo.png}};
-    %\tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo-Pride.png}}; % Pride version
+    %\tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo-Pride.png}}; % PRIDE VERSION
     %%% TODO 2
     % Include your institute logo: ( Your logo may shift due to different aspect ratio, edit the x value to move (bigger->right)
     \tikz[remember picture,overlay] \node at (3.5,0.1){\includegraphics[height=7mm]{logos/JGU-Logo.png}};
@@ -71,23 +72,23 @@
     {\footnotesize
       \begin{center}\tikz\fill[DRed] (2.2,0.0) rectangle (16.5,0.05);\end{center} % The big orange line
       \vspace{-3pt}
-        \hspace*{25.8pt}{\color{DRed}\insertframenumber\hspace{40pt}\Dtitle ~| \Dname }% Slide no., title, name
+        \hspace*{25.8pt}{\color{DRed}\insertframenumber\hspace{40pt}\Dtitle \ - \Dname }% Slide no., title, name
       \vspace{2mm} % extra bottom space
       %
       % Include the DUNE logo:
       \tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo.png}};
-      %\tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo-Pride.png}}; % Pride version
+      %\tikz[remember picture,overlay] \node at (6.1,0.1){\includegraphics[height=7mm]{logos/DUNE-Logo-Pride.png}}; % PRIDE VERSION
       %
     }
   }
   \begin{frame}
-      {\hspace{4.2mm}\color{DRed} \fontsize{28}{36} \Dtitle }
+      {\hspace{3mm}\bf\color{DRed} \fontsize{28}{36} \Dtitle } % Include big, bold title
 
-      {\color{DRed} \fontsize{20}{26} \Dname }
+      {\color{DRed} \fontsize{20}{26} \Dname {~ \small \Dpronoun}} % Name
 
-      {\color{DRed} \fontsize{20}{26} \Dsession }
+      {\color{DRed} \fontsize{20}{26} \Dsession } % Location/Session/Institute
 
-      {\color{DRed} \fontsize{20}{26} \Ddate }
+      {\indent\color{DRed} \fontsize{20}{26} \Ddate } % Date
   \end{frame}
   \addtocounter{framenumber}{-1} % Title slide doesn't count
 } %% END TITLE SLIDE
@@ -135,24 +136,23 @@
 % EXAMPLE: Slide with bullets and an image
 \begin{frame}{I love DUNE}
   \begin{minipage}[t]{0.37\textwidth}
-    \leavevmode \vskip 0pt \vskip -\baselineskip%
-    what I love about DUNE
+    \leavevmode \vskip 0pt \vskip -\baselineskip% This weirdness is needed to allign minipages with big image
+    What I love about DUNE
     \begin{itemize}
-      \item TODO
-      \item TODO
-      \item TODO
+      \item to be filled
+      \item to be filled
+      \item to be filled
       \item ????
       \item Profit!
     \end{itemize}
   \end{minipage}%
   \begin{minipage}[t]{0.57\textwidth}%
-    \leavevmode%
-    \vskip 0pt%
-    \vskip -\baselineskip%
-      \includegraphics[width=\textwidth]{logos/DUNE-Logo-Pride-Text.png}
+    \leavevmode \vskip 0pt \vskip -\baselineskip% This weirdness is needed to allign minipages with big image
+    \includegraphics[width=\textwidth]{logos/DUNE-Logo-Pride-Text.png}
   \end{minipage}%
 \end{frame}
 
+% EXAMPLE: You can just type latex into a frame and it'll probably look alright
 \begin{frame}{Quick Maffs}
   Do all your favourite \LaTeX \ things!
 
@@ -162,4 +162,4 @@
 \end{frame}
 
 
-\end{document}
+\end{document} % TODO 999 End of document

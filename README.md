@@ -4,7 +4,7 @@ LaTeX Beamer Template for DUNE Slides
 
 ## Building
 
-Currently builds only with `xelatex`, run `xelatex main.tex` to compile, then view `main.pdf` with your favourite PDF viewer.
+Currently builds with `xelatex` or `pdflatex`, run `xelatex main.tex`/`pdflatex main.tex` to compile, then view `main.pdf` with your favourite PDF viewer.
 
 
 ## Editing
